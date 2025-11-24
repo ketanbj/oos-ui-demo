@@ -6,6 +6,7 @@ import { useSimulationStore } from '../state/simulationStore'
 import { positionToVector3 } from '../simulation/utils'
 import type { Satellite } from '../simulation/types'
 import { simulationConfig } from '../simulation/config'
+import earthTextureImg from '../assets/earth.jpg'
 
 const SatellitePoint = ({
   sat,
@@ -47,16 +48,23 @@ const SatellitePoint = ({
   )
 }
 
-const GroundStationPoint = ({ lat, lon }: { lat: number; lon: number }) => {
+const GroundStationPoint = ({ lat, lon, id }: { lat: number; lon: number; id: string }) => {
   const pos = useMemo(() => {
     const { x, y, z } = positionToVector3(lat, lon, 0)
-    return new THREE.Vector3(x * 0.98, y * 0.98, z * 0.98)
+    // lift slightly above surface so it shows above the earth texture
+    return new THREE.Vector3(x * 1.02, y * 1.02, z * 1.02)
   }, [lat, lon])
   return (
-    <mesh position={pos}>
-      <sphereGeometry args={[0.015, 10, 10]} />
-      <meshStandardMaterial emissive={'#7c5cf4'} color={'#9b8afa'} emissiveIntensity={2.4} />
-    </mesh>
+    <group position={pos}>
+      <mesh>
+        <sphereGeometry args={[0.018, 12, 12]} />
+        <meshStandardMaterial emissive={'#7c5cf4'} color={'#b9a6ff'} emissiveIntensity={3} />
+      </mesh>
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[0.022, 0.03, 32]} />
+        <meshBasicMaterial color="#7c5cf4" transparent opacity={0.5} />
+      </mesh>
+    </group>
   )
 }
 
@@ -87,6 +95,15 @@ const Scene = ({ onHover }: { onHover: (sat: Satellite | null) => void }) => {
   const stations = simulationConfig.groundStations
   const [time, setTime] = useState(0)
 
+  const earthTexture = useMemo(() => {
+    const loader = new THREE.TextureLoader()
+    const tex = loader.load(earthTextureImg)
+    tex.anisotropy = 8
+    tex.wrapS = THREE.ClampToEdgeWrapping
+    tex.wrapT = THREE.ClampToEdgeWrapping
+    return tex
+  }, [])
+
   useFrame((_, delta) => {
     step(delta)
     setTime((t) => t + delta)
@@ -102,16 +119,23 @@ const Scene = ({ onHover }: { onHover: (sat: Satellite | null) => void }) => {
       <pointLight position={[5, 5, 5]} intensity={1.2} color="#7ce7b7" />
       <Stars radius={80} depth={60} count={2000} factor={4} saturation={0} fade speed={0.5} />
       <mesh>
-        <sphereGeometry args={[1, 64, 64]} />
+        <sphereGeometry args={[1, 96, 96]} />
         <meshStandardMaterial
-          color={filters.layers.heatmap ? '#0f172a' : '#0b1224'}
-          emissive={filters.layers.heatmap ? '#12304f' : '#0b1224'}
-          emissiveIntensity={filters.layers.heatmap ? 0.8 : 0.4}
+          map={earthTexture}
+          color="#ffffff"
+          emissive={filters.layers.heatmap ? '#12304f' : '#060b18'}
+          emissiveIntensity={filters.layers.heatmap ? 0.25 : 0.1}
+          roughness={0.6}
+          metalness={0}
         />
+      </mesh>
+      <mesh scale={[1.01, 1.01, 1.01]}>
+        <sphereGeometry args={[1, 64, 64]} />
+        <meshStandardMaterial color="#6de3ff" transparent opacity={0.06} />
       </mesh>
 
       {stations.map((gs) => (
-        <GroundStationPoint key={gs.id} lat={gs.coordinates.lat} lon={gs.coordinates.lon} />
+        <GroundStationPoint key={gs.id} id={gs.id} lat={gs.coordinates.lat} lon={gs.coordinates.lon} />
       ))}
 
       {filters.layers.isl &&
@@ -136,7 +160,7 @@ export const OrbitalCanvas = () => {
   const [hovered, setHovered] = useState<Satellite | null>(null)
 
   return (
-    <div className="relative h-[540px] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+    <div className="relative h-[640px] xl:h-[720px] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40">
       <Canvas camera={{ position: [0, 0, 4.2], fov: 48 }}>
         <Scene onHover={setHovered} />
       </Canvas>

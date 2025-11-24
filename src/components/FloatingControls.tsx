@@ -2,15 +2,22 @@ import { useSimulationStore } from '../state/simulationStore'
 
 const speeds = [1, 10, 100]
 
-export const FloatingControls = () => {
+export const FloatingControls = ({ variant = 'floating' }: { variant?: 'floating' | 'sidebar' }) => {
   const speed = useSimulationStore((s) => s.speed)
   const setSpeed = useSimulationStore((s) => s.setSpeed)
   const paused = useSimulationStore((s) => s.paused)
   const togglePause = useSimulationStore((s) => s.togglePause)
   const stepOnce = useSimulationStore((s) => s.stepOnce)
 
+  const layoutClass =
+    variant === 'floating'
+      ? 'fixed bottom-4 right-4 w-72 shadow-glow backdrop-blur'
+      : 'w-full'
+
   return (
-    <div className="pointer-events-auto fixed bottom-4 right-4 z-30 w-72 rounded-2xl border border-white/10 bg-space-panel/90 p-3 shadow-glow backdrop-blur">
+    <div
+      className={`pointer-events-auto z-30 rounded-2xl border border-white/10 bg-space-panel/80 p-3 ${layoutClass}`}
+    >
       <div className="flex items-center justify-between text-xs text-slate-400">
         <span className="uppercase tracking-[0.2em] text-space-accent">Sim control</span>
         <span>{paused ? 'Paused' : 'Running'}</span>
