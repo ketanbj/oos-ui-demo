@@ -2,12 +2,488 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>oos-demo-codex</title>
+    <title>Orbital OS | Executive System Demo</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <p class="kicker">Orbital OS</p>
+          <h1>Executive System Demo</h1>
+          <p class="subtle">Twin live model · baseline vs orbital OS · resilience economics</p>
+        </div>
+        <div class="actions">
+          <p class="active-scenario">
+            Scenario: <span id="scenarioLabel">Control-plane bad update</span>
+          </p>
+          <button id="replayBtn" class="replay">Replay Event</button>
+        </div>
+      </header>
+
+      <div class="tab-row" role="tablist" aria-label="Demo tabs">
+        <button class="demo-tab active" data-tab="replay" role="tab" aria-selected="true">Architecture Replay</button>
+        <button class="demo-tab" data-tab="starloom" role="tab" aria-selected="false">StarLoom Economics</button>
+        <button class="demo-tab" data-tab="krios" role="tab" aria-selected="false">Krios Availability</button>
+        <button class="demo-tab" data-tab="energy" role="tab" aria-selected="false">Energy-Aware Scheduling</button>
+        <button class="demo-tab" data-tab="ai" role="tab" aria-selected="false">AI Workload Impact</button>
+      </div>
+
+      <section id="panel-replay" class="tab-panel active">
+        <section class="card impact-board">
+          <div class="impact-board-head">
+            <div>
+              <p class="block-title">Run the same incident against two architectures</p>
+              <p class="topic-sub">Side-by-side incident replay with shared initial conditions.</p>
+            </div>
+            <button id="simpleReplayBtn" class="replay">Replay Incident</button>
+          </div>
+          <div id="simpleScenarioButtons" class="impact-preset-row"></div>
+          <div class="impact-twin-grid">
+            <article class="impact-card">
+              <p class="impact-card-title">Centralized Baseline</p>
+              <canvas id="simpleBaselineCanvas" width="760" height="330" aria-label="Simple baseline incident impact view"></canvas>
+              <p class="impact-card-metric">Impacted: <span id="simpleBaselineImpactLabel">0%</span></p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-card-title">Orbital OS Architecture</p>
+              <canvas id="simpleOrbitalCanvas" width="760" height="330" aria-label="Simple Orbital OS incident impact view"></canvas>
+              <p class="impact-card-metric">Impacted: <span id="simpleOrbitalImpactLabel">0%</span></p>
+            </article>
+          </div>
+        </section>
+
+        <main class="layout">
+          <section class="scene-stack">
+            <article class="scene-panel card">
+              <div class="scene-header">
+                <p class="scene-title">Centralized Baseline</p>
+                <p class="scene-phase" id="baselinePhaseLabel">Nominal</p>
+              </div>
+              <div id="baselineSceneHost" class="scene-host" aria-label="Baseline 3D earth and satellites"></div>
+              <div class="scene-overlay bottom-left legend">
+                <div><span class="dot healthy"></span> Healthy</div>
+                <div><span class="dot warning"></span> At Risk</div>
+                <div><span class="dot fail"></span> Failed</div>
+                <div><span class="dot recover"></span> Recovered</div>
+              </div>
+              <div class="scene-overlay bottom-right impact">
+                <p class="overlay-label">Impacted satellites</p>
+                <p id="baselineImpactedCount" class="overlay-value">0 / 0</p>
+              </div>
+            </article>
+
+            <article class="scene-panel card">
+              <div class="scene-header">
+                <p class="scene-title">Orbital OS</p>
+                <p class="scene-phase" id="orbitalPhaseLabel">Nominal</p>
+              </div>
+              <div id="orbitalSceneHost" class="scene-host" aria-label="Orbital OS 3D earth and satellites"></div>
+              <div class="scene-overlay bottom-left legend">
+                <div><span class="dot healthy"></span> Healthy</div>
+                <div><span class="dot warning"></span> At Risk</div>
+                <div><span class="dot fail"></span> Failed</div>
+                <div><span class="dot recover"></span> Recovered</div>
+              </div>
+              <div class="scene-overlay bottom-right impact">
+                <p class="overlay-label">Impacted satellites</p>
+                <p id="orbitalImpactedCount" class="overlay-value">0 / 0</p>
+              </div>
+            </article>
+          </section>
+
+          <aside class="control-panel">
+            <section class="card block">
+              <p class="block-title">Incident presets</p>
+              <div id="scenarioButtons" class="scenario-list"></div>
+            </section>
+
+            <section class="card block progression">
+              <p class="block-title">Event progression</p>
+              <div class="progression-head">
+                <p id="eventClock" class="event-clock">T+00.0s</p>
+                <p id="eventPhaseText" class="event-phase-text">Awaiting replay</p>
+              </div>
+              <div class="timeline-track" aria-hidden="true">
+                <div id="timelineFill" class="timeline-fill"></div>
+              </div>
+              <div class="timeline-stages" role="list" aria-label="Event stages">
+                <div class="stage active" data-stage="0" role="listitem">Fault</div>
+                <div class="stage" data-stage="1" role="listitem">At Risk</div>
+                <div class="stage" data-stage="2" role="listitem">Propagation</div>
+                <div class="stage" data-stage="3" role="listitem">Recovery</div>
+              </div>
+              <div class="impact-rows">
+                <div class="impact-row">
+                  <p>Baseline</p>
+                  <div class="impact-bar-shell"><div id="baselineImpactBar" class="impact-bar baseline"></div></div>
+                  <span id="baselineImpactPct">0%</span>
+                </div>
+                <div class="impact-row">
+                  <p>Orbital OS</p>
+                  <div class="impact-bar-shell"><div id="orbitalImpactBar" class="impact-bar orbital"></div></div>
+                  <span id="orbitalImpactPct">0%</span>
+                </div>
+              </div>
+            </section>
+            <section class="card block notes">
+              <p class="block-title">Model used</p>
+              <ul>
+                <li>Replay uses the same incident seed and constellation sample on both architectures.</li>
+                <li>Difference in outcomes comes from blast-radius and recovery-constant assumptions.</li>
+                <li>Impact bars are computed from active failed set plus propagated spread set by replay stage.</li>
+              </ul>
+            </section>
+          </aside>
+        </main>
+      </section>
+
+      <section id="panel-starloom" class="tab-panel">
+        <main class="layout">
+          <section class="card topic-main">
+            <div class="topic-head">
+              <p class="block-title">StarLoom commercial impact model</p>
+              <p class="topic-sub">Annualized baseline versus Orbital OS exposure using scenario-weighted operational assumptions.</p>
+            </div>
+            <section class="kpi-table-wrap">
+              <p class="block-title">Scenario-driven technical deltas</p>
+              <div class="kpi-table" role="table" aria-label="Baseline versus Orbital OS metrics">
+                <div class="kpi-row header" role="row">
+                  <div>Metric</div>
+                  <div>Baseline</div>
+                  <div>Orbital OS</div>
+                </div>
+                <div class="kpi-row" role="row">
+                  <div>Blast radius</div>
+                  <div id="blastBaselineOut">97%</div>
+                  <div id="blastOrbitalOut">31%</div>
+                </div>
+                <div class="kpi-row" role="row">
+                  <div>Recovery time</div>
+                  <div id="mttrBaselineOut">165 min</div>
+                  <div id="mttrOrbitalOut">42 sec</div>
+                </div>
+                <div class="kpi-row" role="row">
+                  <div>Session continuity</div>
+                  <div id="continuityBaselineOut">58%</div>
+                  <div id="continuityOrbitalOut">95%</div>
+                </div>
+                <div class="kpi-row" role="row">
+                  <div>Service confidence</div>
+                  <div>Low</div>
+                  <div>High</div>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <aside class="control-panel">
+            <section class="card block controls">
+              <p class="block-title">Economic controls</p>
+              <label>Fleet size
+                <input id="fleetSize" type="range" min="4000" max="14000" value="8500" step="250" />
+                <span id="fleetSizeVal" class="control-val"></span>
+              </label>
+              <label>Incidents / year
+                <input id="incidentsPerYear" type="range" min="1" max="8" value="3" step="1" />
+                <span id="incidentsPerYearVal" class="control-val"></span>
+              </label>
+              <label>Enterprise ARR at risk (USD)
+                <input id="enterpriseArr" type="range" min="100" max="2000" value="550" step="25" />
+                <span id="enterpriseArrVal" class="control-val"></span>
+              </label>
+            </section>
+
+            <section class="card block economics">
+              <p class="block-title">Modeled annual impact</p>
+              <div class="economic-row">
+                <span>Baseline exposure</span>
+                <strong id="baselineExposureOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Orbital OS exposure</span>
+                <strong id="oosExposureOut">$0</strong>
+              </div>
+              <div class="economic-row accent">
+                <span>Avoidable exposure</span>
+                <strong id="avoidableExposureOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Payback on $15M program</span>
+                <strong id="paybackOut">N/A</strong>
+              </div>
+              <canvas id="impactChart" width="460" height="170" aria-label="12 month impact chart"></canvas>
+            </section>
+
+            <section class="card block notes">
+              <p class="block-title">Model used</p>
+              <ul id="helperNotes"></ul>
+            </section>
+          </aside>
+        </main>
+      </section>
+
+      <section id="panel-krios" class="tab-panel">
+        <main class="topic-layout">
+          <section class="card topic-main">
+            <div class="topic-head">
+              <p class="block-title">Krios availability model</p>
+              <p class="topic-sub">Direct access continuity and handover overhead across one orbital period.</p>
+            </div>
+            <div class="twin-canvas-grid">
+              <article class="mini-canvas-card">
+                <p class="mini-canvas-title">Baseline</p>
+                <canvas id="kriosBaselineCanvas" width="760" height="360" aria-label="Krios baseline availability simulation"></canvas>
+              </article>
+              <article class="mini-canvas-card">
+                <p class="mini-canvas-title">Orbital OS</p>
+                <canvas id="kriosOosCanvas" width="760" height="360" aria-label="Krios orbital OS availability simulation"></canvas>
+              </article>
+            </div>
+            <div class="topic-metrics four">
+              <article><p class="metric-label">Baseline direct access</p><p id="kriosBaselineAccess" class="metric-value">0%</p></article>
+              <article><p class="metric-label">Orbital OS direct access</p><p id="kriosOosAccess" class="metric-value">0%</p></article>
+              <article><p class="metric-label">Baseline handovers/hr</p><p id="kriosBaselineHandovers" class="metric-value">0</p></article>
+              <article><p class="metric-label">Orbital OS handovers/hr</p><p id="kriosOosHandovers" class="metric-value">0</p></article>
+            </div>
+          </section>
+          <aside class="card topic-side">
+            <section class="topic-section controls compact-controls">
+              <p class="block-title">Technical controls</p>
+              <label>LEO zones covered
+                <input id="kriosZones" type="range" min="1" max="8" value="3" step="1" />
+                <span id="kriosZonesVal" class="control-val"></span>
+              </label>
+              <label>Demand pressure
+                <input id="kriosDemand" type="range" min="80" max="170" value="120" step="5" />
+                <span id="kriosDemandVal" class="control-val"></span>
+              </label>
+              <div class="topic-metrics two">
+                <article><p class="metric-label">Baseline replicas</p><p id="kriosBaselineInstances" class="metric-value">0</p></article>
+                <article><p class="metric-label">Orbital OS replicas</p><p id="kriosOosInstances" class="metric-value">0</p></article>
+              </div>
+            </section>
+
+            <section class="topic-section controls compact-controls">
+              <p class="block-title">Economic controls</p>
+              <label>Contracts at risk (USD M)
+                <input id="kriosArrRisk" type="range" min="80" max="2000" value="420" step="20" />
+                <span id="kriosArrRiskVal" class="control-val"></span>
+              </label>
+              <label>SLA penalty (USD k / outage hr)
+                <input id="kriosSlaPenalty" type="range" min="40" max="1200" value="240" step="10" />
+                <span id="kriosSlaPenaltyVal" class="control-val"></span>
+              </label>
+              <label>Major events / year
+                <input id="kriosIncidents" type="range" min="1" max="12" value="4" step="1" />
+                <span id="kriosIncidentsVal" class="control-val"></span>
+              </label>
+            </section>
+
+            <section class="topic-section economics topic-economics">
+              <p class="block-title">Modeled annual impact</p>
+              <div class="economic-row">
+                <span>Baseline availability exposure</span>
+                <strong id="kriosBaselineExposureOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Orbital OS availability exposure</span>
+                <strong id="kriosOosExposureOut">$0</strong>
+              </div>
+              <div class="economic-row accent">
+                <span>Avoidable annual exposure</span>
+                <strong id="kriosAvoidedOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Payback on $9M Krios rollout</span>
+                <strong id="kriosPaybackOut">N/A</strong>
+              </div>
+            </section>
+
+            <section class="notes compact">
+              <p class="block-title">Model used</p>
+              <ul id="kriosNotes"></ul>
+            </section>
+          </aside>
+        </main>
+      </section>
+
+      <section id="panel-energy" class="tab-panel">
+        <main class="topic-layout">
+          <section class="card topic-main">
+            <div class="topic-head">
+              <p class="block-title">Energy-aware orchestration</p>
+              <p class="topic-sub">Harvested-energy variability, eclipse windows, and workload placement outcomes.</p>
+            </div>
+            <div class="twin-canvas-grid">
+              <article class="mini-canvas-card">
+                <p class="mini-canvas-title">Baseline</p>
+                <canvas id="energyBaselineCanvas" width="760" height="360" aria-label="Energy baseline simulation"></canvas>
+              </article>
+              <article class="mini-canvas-card">
+                <p class="mini-canvas-title">Orbital OS</p>
+                <canvas id="energyOosCanvas" width="760" height="360" aria-label="Energy orbital OS simulation"></canvas>
+              </article>
+            </div>
+            <div class="topic-metrics four">
+              <article><p class="metric-label">Baseline brownouts</p><p id="energyBaselineBrownouts" class="metric-value">0</p></article>
+              <article><p class="metric-label">Orbital OS brownouts</p><p id="energyOosBrownouts" class="metric-value">0</p></article>
+              <article><p class="metric-label">Baseline completion</p><p id="energyBaselineCompletion" class="metric-value">0%</p></article>
+              <article><p class="metric-label">Orbital OS completion</p><p id="energyOosCompletion" class="metric-value">0%</p></article>
+            </div>
+          </section>
+          <aside class="card topic-side">
+            <section class="topic-section controls compact-controls">
+              <p class="block-title">Technical controls</p>
+              <label>Workload intensity
+                <input id="energyLoad" type="range" min="70" max="170" value="115" step="5" />
+                <span id="energyLoadVal" class="control-val"></span>
+              </label>
+              <label>Eclipse severity
+                <input id="energyEclipse" type="range" min="10" max="95" value="60" step="5" />
+                <span id="energyEclipseVal" class="control-val"></span>
+              </label>
+              <label>Battery reserve policy
+                <input id="energyStorage" type="range" min="20" max="90" value="55" step="5" />
+                <span id="energyStorageVal" class="control-val"></span>
+              </label>
+            </section>
+
+            <section class="topic-section controls compact-controls">
+              <p class="block-title">Economic controls</p>
+              <label>Orbital IT load (MW)
+                <input id="energyFleetMw" type="range" min="20" max="280" value="95" step="5" />
+                <span id="energyFleetMwVal" class="control-val"></span>
+              </label>
+              <label>Delivered energy value (USD / kWh)
+                <input id="energyValueRate" type="range" min="8" max="65" value="21" step="1" />
+                <span id="energyValueRateVal" class="control-val"></span>
+              </label>
+              <label>Brownout penalty (USD k / event)
+                <input id="energyBrownoutPenalty" type="range" min="30" max="1500" value="280" step="10" />
+                <span id="energyBrownoutPenaltyVal" class="control-val"></span>
+              </label>
+            </section>
+
+            <section class="topic-section economics topic-economics">
+              <p class="block-title">Modeled annual impact</p>
+              <div class="economic-row">
+                <span>Baseline energy exposure</span>
+                <strong id="energyBaselineExposureOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Orbital OS energy exposure</span>
+                <strong id="energyOosExposureOut">$0</strong>
+              </div>
+              <div class="economic-row accent">
+                <span>Annual value protected</span>
+                <strong id="energyAvoidedOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Payback on $12M energy program</span>
+                <strong id="energyPaybackOut">N/A</strong>
+              </div>
+            </section>
+
+            <section class="notes compact">
+              <p class="block-title">Model used</p>
+              <ul id="energyNotes"></ul>
+            </section>
+          </aside>
+        </main>
+      </section>
+
+      <section id="panel-ai" class="tab-panel">
+        <main class="topic-layout">
+          <section class="card topic-main">
+            <div class="topic-head">
+              <p class="block-title">AI workloads in orbital data centers</p>
+              <p class="topic-sub">Inference/training service behavior during orbital control events.</p>
+            </div>
+            <div class="twin-canvas-grid">
+              <article class="mini-canvas-card">
+                <p class="mini-canvas-title">Baseline</p>
+                <canvas id="aiBaselineCanvas" width="760" height="360" aria-label="AI baseline workload simulation"></canvas>
+              </article>
+              <article class="mini-canvas-card">
+                <p class="mini-canvas-title">Orbital OS</p>
+                <canvas id="aiOosCanvas" width="760" height="360" aria-label="AI orbital OS workload simulation"></canvas>
+              </article>
+            </div>
+            <div class="topic-metrics five">
+              <article><p class="metric-label">Baseline p95 latency</p><p id="aiBaselineLatency" class="metric-value">0 ms</p></article>
+              <article><p class="metric-label">Orbital OS p95 latency</p><p id="aiOosLatency" class="metric-value">0 ms</p></article>
+              <article><p class="metric-label">Baseline dropped jobs</p><p id="aiBaselineDrop" class="metric-value">0%</p></article>
+              <article><p class="metric-label">Orbital OS dropped jobs</p><p id="aiOosDrop" class="metric-value">0%</p></article>
+              <article><p class="metric-label">Protected annual AI value</p><p id="aiProtectedValue" class="metric-value">$0</p></article>
+            </div>
+          </section>
+          <aside class="card topic-side">
+            <section class="topic-section controls compact-controls">
+              <p class="block-title">Technical controls</p>
+              <label>Inference QPS
+                <input id="aiQps" type="range" min="1000" max="30000" value="12000" step="500" />
+                <span id="aiQpsVal" class="control-val"></span>
+              </label>
+              <label>Model size (GB)
+                <input id="aiModelSize" type="range" min="2" max="24" value="10" step="1" />
+                <span id="aiModelSizeVal" class="control-val"></span>
+              </label>
+              <label>Incident stress / year
+                <input id="aiIncidentStress" type="range" min="1" max="8" value="3" step="1" />
+                <span id="aiIncidentStressVal" class="control-val"></span>
+              </label>
+              <div class="topic-metrics two">
+                <article><p class="metric-label">Baseline GPU util.</p><p id="aiBaselineUtil" class="metric-value">0%</p></article>
+                <article><p class="metric-label">Orbital OS GPU util.</p><p id="aiOosUtil" class="metric-value">0%</p></article>
+              </div>
+            </section>
+
+            <section class="topic-section controls compact-controls">
+              <p class="block-title">Economic controls</p>
+              <label>Inference value (USD / 1k requests)
+                <input id="aiValuePerK" type="range" min="4" max="120" value="22" step="1" />
+                <span id="aiValuePerKVal" class="control-val"></span>
+              </label>
+              <label>SLA penalty (USD / dropped request)
+                <input id="aiPenaltyPerDrop" type="range" min="1" max="35" value="8" step="1" />
+                <span id="aiPenaltyPerDropVal" class="control-val"></span>
+              </label>
+              <label>GPU-hour cost (USD / hr)
+                <input id="aiGpuCost" type="range" min="1" max="14" value="4" step="1" />
+                <span id="aiGpuCostVal" class="control-val"></span>
+              </label>
+            </section>
+
+            <section class="topic-section economics topic-economics">
+              <p class="block-title">Modeled annual impact</p>
+              <div class="economic-row">
+                <span>Baseline AI exposure</span>
+                <strong id="aiBaselineExposureOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Orbital OS AI exposure</span>
+                <strong id="aiOosExposureOut">$0</strong>
+              </div>
+              <div class="economic-row accent">
+                <span>Annual AI value protected</span>
+                <strong id="aiAvoidedOut">$0</strong>
+              </div>
+              <div class="economic-row">
+                <span>Payback on $20M AI platform</span>
+                <strong id="aiPaybackOut">N/A</strong>
+              </div>
+            </section>
+
+            <section class="notes compact">
+              <p class="block-title">Model used</p>
+              <ul id="aiNotes"></ul>
+            </section>
+          </aside>
+        </main>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

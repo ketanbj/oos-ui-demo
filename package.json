@@ -1,0 +1,23 @@
+{
+  "name": "oos-ui-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy:gcp:cheap": "bash scripts/deploy_gcp_static.sh",
+    "update:shell1-tle": "node scripts/build_starlink_shell1.mjs",
+    "update:ground-stations": "node scripts/build_ground_stations.mjs",
+    "update:data": "npm run update:shell1-tle && npm run update:ground-stations"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "satellite.js": "^6.0.2",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

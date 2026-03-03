@@ -1,0 +1,1155 @@
+{
+  "source": "Unofficial Starlink Global Gateways & PoPs (Google My Maps)",
+  "source_url": "https://www.google.com/maps/d/kml?mid=1805q6rlePY4WZd8QMOaNe2BqAgFkYBY&forcekml=1",
+  "generated_at": "2026-03-02T23:00:48.524Z",
+  "counts": {
+    "total_gateway_points": 482,
+    "operational_like_points": 239,
+    "display_points": 160
+  },
+  "mirrored_sites": [
+    {
+      "name": "Arlington, OR | Mega",
+      "lat": 45.6255277777778,
+      "lon": -120.174777777778,
+      "status": "Built 18 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Woodwalton, UK",
+      "lat": 52.404967,
+      "lon": -0.219117,
+      "status": "Built 10(?), presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Makassar, ID",
+      "lat": -5.173028,
+      "lon": 119.43325,
+      "status": "Presumed Live",
+      "antennaCount": 9
+    }
+  ],
+  "stations": [
+    {
+      "name": "Unalaska, AK, US",
+      "lat": 53.8602778,
+      "lon": -166.5048611,
+      "status": "Live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Nome, AK, US",
+      "lat": 64.5035,
+      "lon": -165.4283056,
+      "status": "built 9, likely only 4 live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Molokai, HI",
+      "lat": 21.1127,
+      "lon": -157.06323,
+      "status": "Built | STA",
+      "antennaCount": 8
+    },
+    {
+      "name": "Anchorage, AK - Great Alaskan GW",
+      "lat": 61.18575,
+      "lon": -149.876389,
+      "status": "Presumed Live",
+      "antennaCount": 12
+    },
+    {
+      "name": "Ketchikan, AK",
+      "lat": 55.3737,
+      "lon": -131.718988888889,
+      "status": "Grant of Authority; Built 9",
+      "antennaCount": 8
+    },
+    {
+      "name": "Charleston, OR / Bandon, OR | Mega",
+      "lat": 43.2477105,
+      "lon": -124.3839881,
+      "status": "9+10(?) of 40 built",
+      "antennaCount": 40
+    },
+    {
+      "name": "Bellingham, WA - The Bellingham GW",
+      "lat": 48.774028,
+      "lon": -122.449111,
+      "status": "Built 20 of 32",
+      "antennaCount": 32
+    },
+    {
+      "name": "Redmond, WA | Mega",
+      "lat": 47.6962777777778,
+      "lon": -122.035305555556,
+      "status": "Built | Ka Grant",
+      "antennaCount": 40
+    },
+    {
+      "name": "San Jose, CA - The Walsh GW",
+      "lat": 37.370444,
+      "lon": -121.969167,
+      "status": "Built 20 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Arlington, OR | Mega",
+      "lat": 45.6255277777778,
+      "lon": -120.174777777778,
+      "status": "Built 18 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Brewster, WA - TT&C (BR1)",
+      "lat": 48.1486111111111,
+      "lon": -119.701138888889,
+      "status": "Live",
+      "antennaCount": 2
+    },
+    {
+      "name": "Los Angeles, CA - Anotha One' in GW",
+      "lat": 33.924306,
+      "lon": -118.318444,
+      "status": "Built 24 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Adelanto, CA | E-band",
+      "lat": 34.6023889,
+      "lon": -117.4545556,
+      "status": "Built 9+24 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Niland, CA | Mega",
+      "lat": 33.2204867,
+      "lon": -115.4668146,
+      "status": "Built 5 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Panaca, NV",
+      "lat": 37.7836389,
+      "lon": -114.6926944,
+      "status": "Grant of Authority; Built 9",
+      "antennaCount": 8
+    },
+    {
+      "name": "Roll, AZ - They See Me Rollin GW",
+      "lat": 32.815278,
+      "lon": -113.797389,
+      "status": "Built 20 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Goodyear, AZ - Estrella Mountain GW",
+      "lat": 33.412128,
+      "lon": -112.412853,
+      "status": "Built 16 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "West Jordan, UT",
+      "lat": 40.6196667,
+      "lon": -111.9860556,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Lindon, UT - The Gong GW",
+      "lat": 40.332722,
+      "lon": -111.731167,
+      "status": "Built 20(?) of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Douglas, WY - I'm a Business, Man GW",
+      "lat": 42.740139,
+      "lon": -105.350417,
+      "status": "Built 10 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Centennial, CO - The Centennial GW,",
+      "lat": 39.591889,
+      "lon": -104.846944,
+      "status": "Built 30, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Elbert, CO",
+      "lat": 39.292528,
+      "lon": -104.50475,
+      "status": "Grant of Authority; Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Des Moines, NM | Mega",
+      "lat": 36.69751,
+      "lon": -103.79202,
+      "status": "Built 10 of 40 Oct 2023",
+      "antennaCount": 40
+    },
+    {
+      "name": "Sanderson TX",
+      "lat": 30.193753,
+      "lon": -102.889981,
+      "status": "Grant of Authority; Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Peñuelas, MX",
+      "lat": 21.73139,
+      "lon": -102.27531,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Charcas, MX",
+      "lat": 23.22612,
+      "lon": -100.97915,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Queretaro, MX | Mega",
+      "lat": 20.57346,
+      "lon": -100.273996,
+      "status": "Presumed Live",
+      "antennaCount": 24
+    },
+    {
+      "name": "Llano Grande, MX",
+      "lat": 19.25892,
+      "lon": -99.58115,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "New Braunfels, TX | Mega",
+      "lat": 29.7840556,
+      "lon": -98.050778,
+      "status": "Grant of Authority; Built 9+5 of 8+32",
+      "antennaCount": 32
+    },
+    {
+      "name": "Corpus Christi, TX | Mega",
+      "lat": 27.7931087,
+      "lon": -97.4519272,
+      "status": "Built 5 of 32/40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Boca Chica, TX - Stargate GW",
+      "lat": 25.9837441,
+      "lon": -97.1907243,
+      "status": "Built 12",
+      "antennaCount": 40
+    },
+    {
+      "name": "Dallas, TX - The First Rodeo | Mega",
+      "lat": 32.719528,
+      "lon": -96.761861,
+      "status": "Built 15 of 20, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Richardson, TX",
+      "lat": 32.9654167,
+      "lon": -96.7125556,
+      "status": "Built 27 of 32 (likely complete), \nadding 8 Ku+E via E240038",
+      "antennaCount": 32
+    },
+    {
+      "name": "Savanna, OK | Mega",
+      "lat": 34.7893055555556,
+      "lon": -95.8765,
+      "status": "Built 5 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Mazahua, MX",
+      "lat": 16.60965,
+      "lon": -94.96423,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Roberts, WI | Mega",
+      "lat": 44.9410278,
+      "lon": -92.5160278,
+      "status": "Built 20 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Tapachula, MX",
+      "lat": 14.7862,
+      "lon": -92.36717,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Galapagos, EC",
+      "lat": -0.7451734,
+      "lon": -90.3154692,
+      "status": "Live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Sheffield, IL | Mega",
+      "lat": 41.3612222,
+      "lon": -89.7433056,
+      "status": "Built 20 of 32; presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Clinton, IL | Mega",
+      "lat": 40.1764722,
+      "lon": -88.8736667,
+      "status": "Built 10 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Lisle, IL - The ChiTown GW",
+      "lat": 41.800642,
+      "lon": -88.096092,
+      "status": "Built 20 of 40; presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Broadview, IL - The fr fr GW",
+      "lat": 41.855028,
+      "lon": -87.858944,
+      "status": "Built 20 of 32; presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Mt Ayr, IN | Mega",
+      "lat": 40.9264444,
+      "lon": -87.2953611,
+      "status": "Built 20 of 40 | STA",
+      "antennaCount": 40
+    },
+    {
+      "name": "Marathon, ON, CA (GSN-19)",
+      "lat": 48.7253692,
+      "lon": -86.3745279,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Angola, IN | Mega",
+      "lat": 41.6355278,
+      "lon": -84.974,
+      "status": "10 of 32 built",
+      "antennaCount": 40
+    },
+    {
+      "name": "Thomaston, GA - The Blitz GW",
+      "lat": 32.947083,
+      "lon": -84.261806,
+      "status": "Built 8(?), presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Columbus, OH",
+      "lat": 40.062602,
+      "lon": -82.771037,
+      "status": "Built | STA",
+      "antennaCount": 8
+    },
+    {
+      "name": "Baxley, GA / Surrency, GA | Mega",
+      "lat": 31.6821667,
+      "lon": -82.2689722,
+      "status": "Built 8+14 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Punta Gorda, FL",
+      "lat": 27.0196667,
+      "lon": -81.7620278,
+      "status": "Built 8+10 as of Feb 2024",
+      "antennaCount": 18
+    },
+    {
+      "name": "Piura, PE | Mega",
+      "lat": -5.159689,
+      "lon": -80.687549,
+      "status": "Built 18 of 24, presumed live",
+      "antennaCount": 24
+    },
+    {
+      "name": "Cape Canaveral, FL, US - The Full Send GW",
+      "lat": 28.5434208,
+      "lon": -80.6666377,
+      "status": "Presumed Live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Mandale, NC",
+      "lat": 35.895778,
+      "lon": -79.226722,
+      "status": "Built 8, expansion started Feb 2024",
+      "antennaCount": 40
+    },
+    {
+      "name": "Port Matilda, PA | Mega",
+      "lat": 40.8061944,
+      "lon": -77.9959444,
+      "status": "Built 10 of 32/40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Sterling, VA - The Schedule Chicken GW",
+      "lat": 38.984992,
+      "lon": -77.423883,
+      "status": "Built 30 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Lima-2, PE",
+      "lat": -12.086933,
+      "lon": -76.975218,
+      "status": "Presumed Live",
+      "antennaCount": 9
+    },
+    {
+      "name": "York, PA | Mega",
+      "lat": 39.9691111,
+      "lon": -76.7230278,
+      "status": "Built 15 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Virginia Beach, VA - The Lil b GW",
+      "lat": 36.783806,
+      "lon": -76.009278,
+      "status": "Built 5 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Bogota, CO",
+      "lat": 4.742491,
+      "lon": -74.144777,
+      "status": "Live",
+      "antennaCount": 9
+    },
+    {
+      "name": "Westbury NY - Take Me Home GW",
+      "lat": 40.755856,
+      "lon": -73.55785,
+      "status": "Built 18 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Bridgewater, CT - The Algo of Power GW",
+      "lat": 41.545417,
+      "lon": -73.354389,
+      "status": "Added 20 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Litchfield CT",
+      "lat": 41.5450277777778,
+      "lon": -73.3540277777778,
+      "status": "Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Calverton, NY - Earth Go Hard GW",
+      "lat": 40.908914,
+      "lon": -72.797608,
+      "status": "Built 20 of 40 | STA",
+      "antennaCount": 40
+    },
+    {
+      "name": "Aquierpa, PE | Mega",
+      "lat": -16.470219,
+      "lon": -71.513401,
+      "status": "Built 8 of 32(?), presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Limache, CL | Mega",
+      "lat": -32.973806,
+      "lon": -71.295694,
+      "status": "Likely built Jul 2025, presumed live",
+      "antennaCount": 10
+    },
+    {
+      "name": "Santa Elena, CL",
+      "lat": -29.99974,
+      "lon": -71.2582,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Noviciado, CL",
+      "lat": -33.39272,
+      "lon": -70.88325,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Punta Arenas, CL",
+      "lat": -52.93974,
+      "lon": -70.85045,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "San Bernardo, CL | Mega",
+      "lat": -33.660278,
+      "lon": -70.739639,
+      "status": "Likely built Jul 2025, presumed live",
+      "antennaCount": 30
+    },
+    {
+      "name": "Santiago de los Caballeros, DO",
+      "lat": 19.48096,
+      "lon": -70.72656,
+      "status": "Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Caleta, DO",
+      "lat": 18.45398,
+      "lon": -69.66174,
+      "status": "Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Willemstad, CW",
+      "lat": 12.097686,
+      "lon": -68.908109,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Mendoza, AR | Mega",
+      "lat": -32.931488,
+      "lon": -68.81049,
+      "status": "Built 8 of 40(?), presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Iqualuit, NU, CA",
+      "lat": 63.75817,
+      "lon": -68.53968,
+      "status": "Live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Ponce, PR",
+      "lat": 18.0619777777778,
+      "lon": -66.5478361111111,
+      "status": "Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Toa Baja, PR",
+      "lat": 18.4310556,
+      "lon": -66.1920861,
+      "status": "Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Sambro Creek, NS, CA (GSN-21)",
+      "lat": 44.4645332,
+      "lon": -63.6131209,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Manaus, BR",
+      "lat": -2.92674,
+      "lon": -59.99778,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Buenos Aires-Technopolis, AR | Mega",
+      "lat": -34.563634,
+      "lon": -58.509623,
+      "status": "Built 11 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Uruguaiana, BR",
+      "lat": -29.76549,
+      "lon": -56.52698,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Presidente Prudente, BR",
+      "lat": -22.1461,
+      "lon": -51.47411,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Rolândia, BR",
+      "lat": -23.337575,
+      "lon": -51.331039,
+      "status": "9 of 32 built, presumed live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Nova Santa Rita, BR",
+      "lat": -29.8428556,
+      "lon": -51.2845,
+      "status": "Built 8 of 40(?), Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Rio Negro, BR",
+      "lat": -26.08857,
+      "lon": -49.79286,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Benevides, BR | Mega",
+      "lat": -1.359325,
+      "lon": -48.2582528,
+      "status": "Built 10 of 40, presumed live",
+      "antennaCount": 0
+    },
+    {
+      "name": "Santana de Parnaíba, BR",
+      "lat": -23.45641,
+      "lon": -46.94226,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Osasco, BR | Mega",
+      "lat": -23.490533,
+      "lon": -46.775014,
+      "status": "16 of 32 built, Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Passa Quatro, BR",
+      "lat": -22.34929,
+      "lon": -44.94544,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Montes Carlos, BR",
+      "lat": -16.68367,
+      "lon": -43.83329,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Itaboraí, BR",
+      "lat": -22.69668,
+      "lon": -42.87279,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Juazeiro do Norte. BR",
+      "lat": -7.2151194,
+      "lon": -39.3367222,
+      "status": "Built 9 of 40(?), Presumed Live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Itaitinga, BR | Mega",
+      "lat": -3.8932222,
+      "lon": -38.5080833,
+      "status": "10(?) of 40(?) built, presumed live",
+      "antennaCount": 0
+    },
+    {
+      "name": "Fortaleza, BR | Mega",
+      "lat": -3.735322,
+      "lon": -38.461675,
+      "status": "Built 24, presumed live",
+      "antennaCount": 9
+    },
+    {
+      "name": "Aracaju, BR",
+      "lat": -11.081214,
+      "lon": -37.146714,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "João Câmara, BR",
+      "lat": -5.54612,
+      "lon": -35.81701,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Killala, IE",
+      "lat": 54.194077,
+      "lon": -9.2114458,
+      "status": "10 of 32(?) built, presumed live",
+      "antennaCount": 0
+    },
+    {
+      "name": "Garrettstown, IE",
+      "lat": 51.64498,
+      "lon": -8.58805,
+      "status": "Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Lepe, ES",
+      "lat": 37.255557,
+      "lon": -7.236135,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Goonhilly, UK",
+      "lat": 50.04964,
+      "lon": -5.18143,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Santa Olalla, ES",
+      "lat": 40.025428,
+      "lon": -4.467699,
+      "status": "Presumed Live (15 of 40)",
+      "antennaCount": 40
+    },
+    {
+      "name": "Loeches (Madrid), ES | Mega",
+      "lat": 40.400965,
+      "lon": -3.405882,
+      "status": "Presumed Live",
+      "antennaCount": 24
+    },
+    {
+      "name": "Morn Hill, UK",
+      "lat": 51.060168,
+      "lon": -1.263883,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Ibi, ES",
+      "lat": 38.60842,
+      "lon": -0.6007,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Villenave d’Ornon, FR",
+      "lat": 44.78096,
+      "lon": -0.53738,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Woodwalton, UK",
+      "lat": 52.404967,
+      "lon": -0.219117,
+      "status": "Built 10(?), presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Wherstead, UK",
+      "lat": 52.019224,
+      "lon": 1.14354,
+      "status": "Built 18 of 32",
+      "antennaCount": 32
+    },
+    {
+      "name": "Lekki, NG",
+      "lat": 6.44952617548687,
+      "lon": 3.58773389218748,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Ikire, NG",
+      "lat": 7.3875,
+      "lon": 4.2124,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Hoofddorp, NL (GSN#105)",
+      "lat": 52.290758,
+      "lon": 4.686589,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Milan, IT | Mega",
+      "lat": 45.475003,
+      "lon": 9.038742,
+      "status": "Presumed Live (12 of 20?)",
+      "antennaCount": 12
+    },
+    {
+      "name": "Villamaggiore-2, IT | Mega expansion",
+      "lat": 45.313654,
+      "lon": 9.184644,
+      "status": "Built 8 of 32(?), presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Aerzen, DE",
+      "lat": 52.060989,
+      "lon": 9.328231,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Marsala, IT",
+      "lat": 37.794324,
+      "lon": 12.493115,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Foggia-2, IT | Mega",
+      "lat": 41.433374,
+      "lon": 15.657053,
+      "status": "Built 18 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Foggia, IT",
+      "lat": 41.432803,
+      "lon": 15.658572,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Sofia, BG",
+      "lat": 42.67197,
+      "lon": 23.383992,
+      "status": "30 built, presumed Live",
+      "antennaCount": 20
+    },
+    {
+      "name": "Plana, BG",
+      "lat": 42.482909,
+      "lon": 23.44491,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Kaunas, LT",
+      "lat": 54.87,
+      "lon": 24.01,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Lobatse, BW | Mega",
+      "lat": -25.259502,
+      "lon": 25.705696,
+      "status": "Built 20 of 40, Reported Live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Muallim, TR",
+      "lat": 40.78875,
+      "lon": 29.50939,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Kigali, RW",
+      "lat": -1.9445274,
+      "lon": 30.0896123,
+      "status": "Live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Nairobi, KE - Karen | Mega",
+      "lat": -1.3502338,
+      "lon": 36.750317,
+      "status": "Presumed Live",
+      "antennaCount": 20
+    },
+    {
+      "name": "Nairobi, KE - Cabanas | Mega",
+      "lat": -1.329119,
+      "lon": 36.88643,
+      "status": "Presumed Live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Umm Qarn, QA | Mega",
+      "lat": 25.551788,
+      "lon": 51.439281,
+      "status": "Live (19 built)",
+      "antennaCount": 32
+    },
+    {
+      "name": "Blue City, OM",
+      "lat": 23.744798,
+      "lon": 57.809288,
+      "status": "Presumed Live (9 built)",
+      "antennaCount": 8
+    },
+    {
+      "name": "Rajshahi, BD | Mega",
+      "lat": 24.371136,
+      "lon": 88.560592,
+      "status": "10 of 40 built, live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Jashore, BD",
+      "lat": 23.1575,
+      "lon": 89.2215,
+      "status": "Reported built, live",
+      "antennaCount": 0
+    },
+    {
+      "name": "Singapore, SG | Mega",
+      "lat": 1.397598,
+      "lon": 103.83539,
+      "status": "Presumed Live",
+      "antennaCount": 31
+    },
+    {
+      "name": "Cikarang Barat, ID - Almat GW | Mega",
+      "lat": -6.306293,
+      "lon": 107.096755,
+      "status": "Presumed Live",
+      "antennaCount": 27
+    },
+    {
+      "name": "Palangka Raya, ID",
+      "lat": -2.21866,
+      "lon": 113.925406,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Onslow, WA, AU",
+      "lat": -21.645295,
+      "lon": 115.130406,
+      "status": "Presumed live",
+      "antennaCount": 0
+    },
+    {
+      "name": "Malaga, WA, AU | Mega",
+      "lat": -31.864147,
+      "lon": 115.895866,
+      "status": "Built 20(?), presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Merredin, WA, AU",
+      "lat": -31.49485,
+      "lon": 118.27765,
+      "status": "Presumed Live",
+      "antennaCount": 9
+    },
+    {
+      "name": "Angeles, PH",
+      "lat": 15.17087,
+      "lon": 120.505747,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Bulla Bulling, WA, AU",
+      "lat": -31.02985,
+      "lon": 120.81962,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Quezon (province), PH",
+      "lat": 13.953,
+      "lon": 121.699,
+      "status": "Reported Live, location unknown",
+      "antennaCount": 0
+    },
+    {
+      "name": "Kendari, ID",
+      "lat": -3.977445,
+      "lon": 122.511309,
+      "status": "Built",
+      "antennaCount": 8
+    },
+    {
+      "name": "Pimba, SA, AU (GSN#3023)",
+      "lat": -31.2507,
+      "lon": 136.80107,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Wamena, ID",
+      "lat": -4.095558,
+      "lon": 138.942714,
+      "status": "6 built, presumed live",
+      "antennaCount": 6
+    },
+    {
+      "name": "Akita, JP",
+      "lat": 39.63828,
+      "lon": 140.06466,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Merauke, ID",
+      "lat": -8.488211,
+      "lon": 140.387901,
+      "status": "7 built, reported live",
+      "antennaCount": 7
+    },
+    {
+      "name": "Otaru, JP",
+      "lat": 43.173215,
+      "lon": 141.258373,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Broken Hill, NSW, AU (GSN#56)",
+      "lat": -31.99829,
+      "lon": 141.4411,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Torrumbarry, VIC, AU",
+      "lat": -36.02526,
+      "lon": 144.50011,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Tumon, GU",
+      "lat": 13.5028056,
+      "lon": 144.8051944,
+      "status": "Built 5 of 8",
+      "antennaCount": 8
+    },
+    {
+      "name": "Koonwarra, VIC, AU",
+      "lat": -38.51812,
+      "lon": 145.95145,
+      "status": "Built 12, Presumed Live",
+      "antennaCount": 11
+    },
+    {
+      "name": "Sellheim, QLD, AU",
+      "lat": -19.999722,
+      "lon": 146.42166,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Boorowa, NSW, AU (GSN#55)",
+      "lat": -34.46214,
+      "lon": 148.70558,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Bathurst, NSW, AU | Mega",
+      "lat": -33.436665,
+      "lon": 149.52242,
+      "status": "Built 10 of 40",
+      "antennaCount": 40
+    },
+    {
+      "name": "Warra, QLD, AU",
+      "lat": -26.9079883,
+      "lon": 150.8916042,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Macquarie Park, NSW, AU | Mega",
+      "lat": -33.785441,
+      "lon": 151.131806,
+      "status": "Live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Ningi, QLD, AU | Mega",
+      "lat": -27.068417,
+      "lon": 153.05476,
+      "status": "Built 26 of 32, presumed live",
+      "antennaCount": 32
+    },
+    {
+      "name": "Krosrae, Micronesia",
+      "lat": 5.3253902,
+      "lon": 163.0126326,
+      "status": "Live",
+      "antennaCount": 4
+    },
+    {
+      "name": "Awarua, NZ",
+      "lat": -46.530531,
+      "lon": 168.383076,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Cromwell, NZ",
+      "lat": -45.061066,
+      "lon": 169.192756,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Tawara Is, Kiribati",
+      "lat": 1.3323183,
+      "lon": 173.0040641,
+      "status": "Live (location unknown)",
+      "antennaCount": 4
+    },
+    {
+      "name": "Puwera, NZ",
+      "lat": -35.7935,
+      "lon": 174.30075,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Cleavdon, NZ",
+      "lat": -36.9897,
+      "lon": 175.05544,
+      "status": "Presumed Live",
+      "antennaCount": 8
+    },
+    {
+      "name": "Cleavedon, NZ | Mega",
+      "lat": -36.98995,
+      "lon": 175.05565,
+      "status": "Built 17 of 40, presumed live",
+      "antennaCount": 40
+    },
+    {
+      "name": "Woodville, NZ | Mega",
+      "lat": -40.352083,
+      "lon": 175.866806,
+      "status": "Built 10 of 40",
+      "antennaCount": 0
+    },
+    {
+      "name": "Suva, FJ",
+      "lat": -18.12915,
+      "lon": 178.46767,
+      "status": "Presumed Live",
+      "antennaCount": 5
+    }
+  ]
+}
